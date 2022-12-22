@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default">
+<!-- <nav class="navbar navbar-default">
     <div class="container-fluid">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" (click)="collapsed = !collapsed">
@@ -25,4 +25,74 @@
         </div>
     </div>
 </div>
+</nav> -->
+
+<nav class="relative flex flex-wrap items-center justify-between px-2 py-3 bg-slate-500 mb-3">
+  <div class="container px-4 mx-auto flex flex-wrap items-center justify-between">
+    <div class="w-full relative flex justify-between lg:w-auto  px-4 lg:static lg:block lg:justify-start">
+      <a class="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white" href="#pablo">
+        Recipe Book      </a>
+      <button class="text-white cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none" type="button" (click)="toggleNavbar()">
+       -
+      </button>
+    </div>
+    <div [ngClass]="{'hidden': !showMenu, 'flex': showMenu}" class="lg:flex lg:flex-grow items-center">
+      <ul class="flex flex-col lg:flex-row list-none ml-auto">
+        <li class="nav-item">
+          <a class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75" href="#pablo">
+            <i class="fab fa-facebook-square text-lg leading-lg text-white opacity-75"></i><span class="ml-2">Recipes</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75" href="#pablo">
+            <i class="fab fa-twitter text-lg leading-lg text-white opacity-75"></i><span class="ml-2">Shopping List</span>
+          </a>
+        </li>
+        <li class="nav-item">
+         
+
+
+
+
+
+
+
+
+        <!-- The main div containing the dropdown -->
+<div class="relative">
+  <!-- The div containing the selected value and an icon to visually indicate if the dropdown is open or closed -->
+  <div (click)="toggleDropDown()" class="relative w-fit px-4 py-2 border border-1 border-neutral-400 rounded-md flex justify-center items-center cursor-pointer">
+      <div class="mr-2">
+          The Selected Value
+      </div>
+      <div>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+      </div>
+  </div>
+  <!-- The div containing the available items -->
+  <div *ngIf="showDropDown"  class="absolute w-fit py-1 mt-2 border border-1 border-neutral-400 rounded-md cursor-pointer">
+    <div class="py-2 px-4 w-full hover:bg-neutral-100">
+      Save Data
+</div>
+<div class="py-2 px-4 w-full hover:bg-neutral-100">
+ Fetch Data
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    </div>
+  </div>
 </nav>

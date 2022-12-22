@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  public collapsed = true;
+  showMenu :boolean = false;
+  toggleNavbar(){
+    this.showMenu = !this.showMenu;
+  }
+  showDropDown :boolean = false;
+  toggleDropDown(){
+    this.showDropDown = !this.showDropDown;
+  }
 }

@@ -1,26 +1,20 @@
-<div class="row">
-    <div class="col-sx-12">
-        <img src="" alt="" class="img-responsive"/>
+    <div >
+        <img src="" alt=""/>
     </div>
+<!--  -->
+    <div >
+<h1 class="font-semibold text-3xl my-7">Recipe Name</h1>
 </div>
 <!--  -->
-<div class="row">
-    <div class="col-sx-12">
-<h1>Recipe Name</h1>
-    </div>
-</div>
-<!--  -->
-<div class="row">
-    <div class="col-sx-12">
+    <div >
         <div class="btn-group">
-            <button type="button" class="btn btn-primary dropdown-toggle">Manage Recipe <span class="caret"></span></button>
-            <ul class="dropdown-menu">
-                <li class="dropdown-"><a href="#">To Shopping List</a></li>
-                <li class="dropdown-"><a href="#">Edit Recipe</a></li>
-                <li class="dropdown-"><a href="#">Delete Recipe</a></li>
+            <button (click)="toggleDropDown()" type="button" class="bg-blue-600 text-white py-2 px-3 "   [ngClass]="showDropDown  ? 'rounded-tr rounded-tl' : 'rounded'" style="width: 200px;">Manage Recipe <span class="caret"></span></button>
+            <ul *ngIf="showDropDown" class="absolute " style="width: 200px;">
+                <li (click)="toggleDropDown()" class="bg-black text-white border border-gray-600 p-1 "><a href="#">To Shopping List</a></li>
+                <li (click)="toggleDropDown()" class="bg-black text-white border border-gray-600 p-1"><a href="#">Edit Recipe</a></li>
+                <li (click)="toggleDropDown()" class="bg-black text-white border border-gray-600 p-1  rounded-br rounded-bl"><a href="#">Delete Recipe</a></li>
             </ul>
         </div>
-    </div>
 </div>
 <!--  -->
 <div class="row">

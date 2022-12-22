@@ -1,11 +1,12 @@
-<div class="row">
-    <div class="col-sx-10">
+
+    <div class="mx-5">
         <app-shopping-edit></app-shopping-edit>
         <hr/>
-        <ul class="ps-0">
-            <a href="#" class="list-group-item p-0" *ngFor="let ingredient of ingredients">
+        <div class="grid grid-cols-12">
+        <ul class="ps-0 flex flex-col col-span-10 my-2">
+            <a href="#" class="border  p-2" *ngFor="let ingredient of ingredients">
                 {{ingredient.name}} ({{ingredient.amount}})
             </a>
         </ul>
     </div>
-</div>
+    </div>

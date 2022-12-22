@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,12 +6,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  showMenu :boolean = false;
-  toggleNavbar(){
+  @Output() renderdComponent = new EventEmitter<string>();  
+  public showMenu: boolean = false;
+  public showDropDown: boolean = false;
+// ------------------------------------------------------
+  public toggleNavbar() {
     this.showMenu = !this.showMenu;
   }
-  showDropDown :boolean = false;
-  toggleDropDown(){
+// ------------------------------------------------------
+
+  public toggleDropDown() {
     this.showDropDown = !this.showDropDown;
   }
+// ------------------------------------------------------
+public selectComponent(value:string){
+  this.renderdComponent.emit(value);
+}
 }

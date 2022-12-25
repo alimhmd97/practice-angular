@@ -1,9 +1,9 @@
     <div >
-        <img src="" alt=""/>
+        <img [src]="selectedRecipe.imagePath" alt="" style="max-height: 300px;"/>
     </div>
 <!--  -->
     <div >
-<h1 class="font-semibold text-3xl my-7">Recipe Name</h1>
+<h1 class="font-semibold text-3xl my-7">{{selectedRecipe.name}}</h1>
 </div>
 <!--  -->
     <div >
@@ -19,7 +19,7 @@
 <!--  -->
 <div class="row">
     <div class="col-sx-12">
-description
+{{selectedRecipe.description}}
     </div>
 </div>
 <!--  -->

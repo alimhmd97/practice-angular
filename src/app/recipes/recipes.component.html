@@ -1,8 +1,11 @@
 <div class="grid grid-cols-12 ">
     <div class=" col-span-5">
-        <app-recipe-list></app-recipe-list>
+        <app-recipe-list (selectedRecipeEvent)="selectedRecipe=($event)"></app-recipe-list>
     </div>
-    <div class="col-span-7 " style="padding-left: 55px;">
-        <app-recipe-details></app-recipe-details>
+    <div class="col-span-7" style="padding-left: 55px;">
+        <app-recipe-details *ngIf="selectedRecipe; else infoText" [selectedRecipe]="selectedRecipe"></app-recipe-details>
+        <ng-template #infoText>
+            <p>Please Select a Recipe</p>
+            </ng-template>
     </div>
 </div>

@@ -12,4 +12,8 @@ public ingredients:Ingredient[]=[
   new Ingredient('tomatoes',5),
   new Ingredient('apple',5)
 ];
+// ------------------------------------------------------------------------------------------------
+onIngredientAdded(ingredient:Ingredient){
+  this.ingredients.push(ingredient);
+}
 }

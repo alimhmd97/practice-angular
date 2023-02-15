@@ -12,6 +12,9 @@ import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 import { FormsModule } from '@angular/forms';
 import { DropdownDirective } from './shared/dropdown.directive';
+import { StoreModule } from '@ngrx/store';
+import { selectRecipeReducer } from './reducers.reducer.ts/recipes.reducer';
+import { NgrxRecipeDetailsComponent } from './recipes/ngrx-recipe-details/ngrx-recipe-details.component';
 
 @NgModule({
   declarations: [
@@ -23,12 +26,14 @@ import { DropdownDirective } from './shared/dropdown.directive';
     RecipeItemComponent,
     ShoppingListComponent,
     ShoppingEditComponent,
-    DropdownDirective
+    DropdownDirective,
+    NgrxRecipeDetailsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    StoreModule.forRoot({recipes:selectRecipeReducer}, {})
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,5 +1,6 @@
 <app-header (renderdComponent)="selectRendersComponent($event)"></app-header>
 <div class="py-2 px-5">
  <app-recipes *ngIf="renderdComponent==='Recipes'"></app-recipes>
+ <app-ngrx-recipe-details *ngIf="renderdComponent==='Recipes'"></app-ngrx-recipe-details>
 <app-shopping-list *ngIf="renderdComponent==='Shopping'"></app-shopping-list>
 </div>
